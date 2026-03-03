@@ -1,5 +1,7 @@
 api/config.json
 api/cso-api
+api/.idea
 fetcher/config.json
 fetcher/cso-poller
+fetcher/.idea
 frontend/node_modules
