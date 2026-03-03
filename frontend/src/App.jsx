@@ -12,8 +12,8 @@ function App() {
 
     useEffect(() => {
         async function fetchData() {
-            const data = (await axios.get("http://api.poo.deveroonie.co.uk/api/stats")).data
-            const assetData = (await axios.get("http://api.poo.deveroonie.co.uk/api/assets")).data.assets
+            const data = (await axios.get("https://api.poo.deveroonie.co.uk/api/stats")).data
+            const assetData = (await axios.get("https://api.poo.deveroonie.co.uk/api/assets")).data.assets
             setStats(data)
             setAssets(assetData)
         }
@@ -178,9 +178,9 @@ function AssetPopup({ assetId, status }) {
     setData(null)
     setEvents(null)
     setTab('info')
-    axios.get(`http://api.poo.deveroonie.co.uk/api/asset/${assetId}`)
+    axios.get(`https://api.poo.deveroonie.co.uk/api/asset/${assetId}`)
       .then(res => setData(res.data))
-    axios.get(`http://api.poo.deveroonie.co.uk/api/asset/${assetId}/events`)
+    axios.get(`https://api.poo.deveroonie.co.uk/api/asset/${assetId}/events`)
       .then(res => {
         const ev = res.data.events ?? res.data
         setEvents(Array.isArray(ev) ? ev : [])
