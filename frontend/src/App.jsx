@@ -37,8 +37,8 @@ function App() {
         paint: {
             'circle-radius': 4,
             'circle-color': ['match', ['get', 'status'], 0, 'green', 1, 'red', 'gray'],
-            'circle-opacity': 0.85,
-            'circle-sort-key': ['match', ['get', 'status'], 0, 0, 1, 2, 1],
+            'circle-opacity': 0.85
+            //'circle-sort-key': ['match', ['get', 'status'], 0, 0, 1, 2, 1],
         }
     }
 
